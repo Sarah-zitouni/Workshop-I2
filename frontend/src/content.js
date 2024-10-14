@@ -1,0 +1,1 @@
+// scrap et envoie le contenu au backend pour analyse 

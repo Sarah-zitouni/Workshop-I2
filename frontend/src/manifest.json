@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "No sensitive extension",
+    "version": "1.0.0",
+    "description": "When enable, it should prevent sensitive content to be seen",
+    "icons": {
+        "48": ".png",
+        "128": ".png"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "faut_en_faire_une.jpg"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
