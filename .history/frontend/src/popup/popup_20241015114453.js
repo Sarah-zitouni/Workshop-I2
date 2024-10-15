@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let sliderValue;
 
+    // Fonction de mise à jour du slider
     function sliderUpdate(value) {
         console.log('llaaaallalal');
         sliderValue = value;
