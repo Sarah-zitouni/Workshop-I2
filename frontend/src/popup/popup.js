@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const min = 0;
     const max = 1;
     const step = 0.1;
@@ -11,20 +11,20 @@ document.addEventListener("DOMContentLoaded", function() {
         ticksContainer.appendChild(tick);
     }
 
-    let sliderValue;
+    let sliderValue = 0.5;
+    localStorage.setItem("sensitivity", sliderValue);
+
 
     function sliderUpdate(value) {
-        console.log('llaaaallalal');
         sliderValue = value;
-        console.log(sliderValue);
         localStorage.setItem("sensitivity", sliderValue);
     }
 
-    slider.addEventListener('input', function() {
+    slider.addEventListener('input', function () {
         sliderUpdate(this.value);
     });
 
-    slider.addEventListener('change', function() {
+    slider.addEventListener('change', function () {
         sliderUpdate(this.value);
     });
 });
