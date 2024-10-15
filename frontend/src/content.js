@@ -21,7 +21,10 @@ chrome.storage.sync.get('sensitivity', function (data) {
 
             if (toxicityScore > sensitivity) {
                 document.body.style.filter = 'blur(5px)';
-                alert('Attention : Contenu sensible détecté !');
+                document.body.setAttribute('aria-hidden', 'true');
+            }  else {
+                document.body.style.filter = 'none';
+                document.body.setAttribute('aria-hidden', 'false');
             }
         })
         .catch(error => console.error('Erreur lors de l\'analyse du contenu :', error));
