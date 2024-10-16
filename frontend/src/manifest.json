@@ -20,9 +20,11 @@
                 "<all_urls>"
             ],
             "js": [
-                "content.js"
+                "textContent.js",
+                "imageContent.js"
             ],
-            "run_at": "document_end"
+            "run_at": "document_end",
+            "type": "module"
         }
     ],
     "host_permissions": [
