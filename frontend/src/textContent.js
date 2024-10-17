@@ -4,7 +4,7 @@ function delay(ms) {
 
 const elementsToAnalyze = document.querySelectorAll('p, h1, h2, h3, div');
 
-const rateLimit = 5;
+const rateLimit = 1;
 
 async function analyzeElements() {
     chrome.storage.sync.get('sensitivity', async function (data) {

@@ -1,0 +1,11 @@
+# Ignorer le dossier node_modules
+node_modules/
+package-lock.json
+package.json
+# Ignorer le fichier .env qui contient des informations sensibles (clés API, mots de passe, etc.)
+.env
+
+# Autres fichiers/dossiers potentiels à ignorer
+npm-debug.log
+yarn-error.log
+.DS_Store 
