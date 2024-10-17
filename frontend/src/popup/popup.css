@@ -1,0 +1,180 @@
+/* Style général */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    text-align: center;
+    color: #333;
+    width: 290px;
+}
+.logo-container span {
+    font-weight: bold;
+    margin-top: 7px;
+    font-size: medium;
+    margin-left: 7px;
+}
+/* En-tête */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+.logo-container {
+    display: flex;
+    margin-right: 28px;
+
+}
+.logo-container .logo {
+    width: 30px;
+    height: 30px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.header-icons i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Contenu principal */
+.main-content {
+    padding: 20px;
+}
+
+.website {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.protection-status {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.total-blocked {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Bouton de basculement */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-left: -31px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ff4d4d;
+    border-radius: 30px;
+    width: 60px;
+    height: 30px;
+    transition: background-color 0.3s;
+}
+
+.toggle-label::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+input:checked + .toggle-label {
+    background-color: #4CAF50;
+}
+
+input:checked + .toggle-label::after {
+    transform: translateX(30px);
+}
+
+/* Lien pour en savoir plus */
+.learn-more {
+    display: block;
+    color: #555;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Menu en bas de la page */
+.footer-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    outline: none;
+}
+
+.menu-btn.active {
+    color: #4CAF50;
+    font-weight: bold;
+}
+/* Niveau de Toxicité */
+.toxicity-level {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.toxicity-level label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+#toxicity-slider {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.protection-status {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+.protection-status.active {
+    color: #4CAF50; /* Vert pour l'état activé */
+}
+
+.protection-status.inactive {
+    color: #FF5722; /* Rouge pour l'état désactivé */
+}

@@ -5,6 +5,7 @@
     "description": "When enable, it should prevent sensitive content to be seen",
     "permissions": [
         "activeTab",
+        "tabs",
         "scripting",
         "storage"
     ],
