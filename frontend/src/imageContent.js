@@ -16,7 +16,7 @@ async function analyzeImage(imgElement) {
     });
 
     console.log(`Envoi de l'image ${imageUrl} au backend en Base64`);
-
+    console.log(base64Image);
     try {
         const body = JSON.stringify({
             image: base64Image
@@ -56,6 +56,8 @@ function unblurElement(element) {
 }
 
 async function analyzeAllImagesOnPage() {
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+    await sleep(1000);
     const imgElements = document.querySelectorAll('img');
 
     for (const imgElement of imgElements) {

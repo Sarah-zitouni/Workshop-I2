@@ -25,7 +25,7 @@ async function analyzeElements() {
         console.log("Texte envoyé pour analyse : ", elementText);
 
         try {
-            const response = await fetch('https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=AIzaSyAexXtPA33bp0hNSS3X_j30X3UhdCZ4u3I', {
+            const response = await fetch('https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
