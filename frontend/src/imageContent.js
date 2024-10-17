@@ -1,5 +1,4 @@
 const apiUrl = 'http://localhost:3000/upload-image';
-const sensitivity = 0.5;
 
 async function analyzeImage(imgElement) {
     const imageUrl = imgElement.src;
@@ -11,21 +10,24 @@ async function analyzeImage(imgElement) {
         const reader = new FileReader();
         reader.onloadend = () => {
             resolve(reader.result);
-        }
+        };
         reader.onerror = reject;
         reader.readAsDataURL(blob);
     });
 
-    console.log(base64Image);
+    console.log(`Envoi de l'image ${imageUrl} au backend en Base64`);
 
     try {
-        const formData = new FormData();
-        formData.append('imageBase64', base64Image);
-        console.log(formData);
+        const body = JSON.stringify({
+            image: base64Image
+        });
 
         const response = await fetch(apiUrl, {
             method: 'POST',
-            body: formData
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: body
         });
 
         if (response.ok) {
